@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+
+/* font-family: 'Ubuntu', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    min-width: 360px;
+    height: 100%;
+    background-color: white;
+    font-family: 'Ubuntu', arial, sans-serif;
+    color: mediumslateblue;
+}
+
+/* header */
+
+.topic {
+    height: 20vh;
+    text-align: center;
+    font-size: 28px;
+}
+
+.topic h1 {
+    padding-top: 25px;
+    text-shadow: 0 0 6px mediumslateblue;
+    font-weight: 600;
+    line-height: 10vh;
+}
+.topic p {
+    line-height: 2,5vh;
+    text-transform: uppercase;
+    text-shadow: 0 0 4px mediumslateblue;
+    font-size: 8px;
+}
+
+/* nawigacja dla użądzeń desktop*/
+
+.deskTop {
+    display: none;
+    width: 100%;
+    height: 8vh;
+}
+
+ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+}
+
+li {
+    height: 25px;
+    flex-basis: 33%;
+
+}
+
+
+li p {
+    display: block;
+    border-bottom: 0 solid mediumslateblue;
+    text-decoration: none;
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    color: mediumslateblue;
+    cursor: pointer;
+}
+
+li p:hover {
+    border-bottom: 2px solid mediumslateblue;
+}
+
+
+/* nawigacja dla mobilek */
+
+.mobiles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 85vh;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 10px; 
+}
+
+.mobiles div {
+    background-size: 100vw 15vh;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 1);
+    overflow: hidden;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: calc(15vh - 50%);
+    box-shadow: 0 0 6px black ;
+}
+
+.one{
+    background-image: url(LakIMG/szlifowanie.jpg);
+}
+
+.two{
+    background-image: url(LakIMG/wytrawianie.jpg);
+}
+
+.three{
+    background-image: url(LakIMG/podwieszanie.jpg);
+}
+
+.four{
+    background-image: url(LakIMG/lakierowanie.jpg);
+}
+
+.five{
+    background-image: url(LakIMG/pakowanie.jpg);
+}
+
+
+.mobiles p {
+    background-color: rgba(0, 0, 0, .5);
+    text-shadow: 0 0 5px white;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+
+
+
+
+/* sekcje ogólne */
+
+.wrapper_sub{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    font-family: 'Ubuntu', arial, sans-serif;
+    color: mediumslateblue;
+}
+
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 10px 10px;
+}
+
+.small_topic {
+    height: 10%;
+    margin: 15px 0;
+    padding: 12px 0;
+    border-top: 2px #333 solid;
+    border-bottom: 2px #333 solid;
+    background-color: mediumslateblue;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 0 5px white;
+    color: white;
+    font-size: 26px;
+}
+
+.btn_grinding, .btn_etching, .btn_hanging, .btn_powder, .btn_packing {
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+    background-color: mediumslateblue;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-size: 15px;
+    text-shadow: 0 0 5px white;
+    box-shadow: 0 0 3px #000;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+div i{
+    animation: arrows 1.2s linear infinite ;
+}
+
+@keyframes arrows {
+0%{
+    transform: translateY(30px);
+}
+100%{
+    transform: translateY(-25px);
+}
+}
+
+@media (min-width:640px) and (orientation: landscape){
+    .wrapper{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .wrapper_sub section{
+        max-width: 500px;
+        margin: 0 auto;
+
+    }
+}
+
+@media (min-width:820px) and (orientation: landscape){
+    .wrapper{
+        max-width: 640px;
+        margin: 0 auto;
+    }
+
+    .wrapper_sub section{
+        max-width: 640px;
+        margin: 0 auto;
+
+    }
+    
+    .mobiles{
+        display:none;
+    }
+    
+    .deskTop{
+        display:block;
+    }
+ 
+    .topic {
+        font-size: 40px;
+    }
+    
+    .topic p {
+        line-height: 4vh;
+        font-size: 15px;
+    }
+
+}
+@media (min-width:1025px) and (orientation: landscape){
+    
+    .wrapper{
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    .wrapper_sub section{
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    .topic {
+        height: 25vh;
+        font-size: 48px;
+    }
+
+    .topic h1 {
+        padding-top: 25px;
+        line-height: 15vh;
+    }
+    .topic p {
+        line-height: 4vh;
+        font-size: 18px;
+    }
+
+    ul {
+        flex-wrap: nowrap;
+        margin-top: 20px;
+       
+    }
+    
+    li {
+        height: 40px;
+        flex-basis: 20%;
+    }
+
+    li p {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .small_topic {
+        height: 18%;
+        border-top: 3px #333 solid;
+        border-bottom: 3px #333 solid;
+        line-height: 65px;
+        font-size: 35px;
+    }
+
+}
+
+@media (min-width:1441px) and (orientation: landscape){
+
+.wrapper{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.wrapper_sub section{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+}
